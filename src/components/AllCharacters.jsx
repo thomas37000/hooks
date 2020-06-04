@@ -7,7 +7,7 @@ import Character from './Character';
 import styles from './Character.css';
 
 export default function All() {
-  const { id } = useParams();
+  // const { id } = useParams();
   const [ data, setData ] = useState([]);
   const [ characters, setCharacters ] = useState([]);
   const [error, setError] = useState(null);
@@ -20,7 +20,7 @@ export default function All() {
   useEffect(() => {
     const getCharacters = async () => {
       try {
-        const res = await axios.get(`https://cdn.rawgit.com/akabab/starwars-api/0.2.1/api/id/${id}.json`);
+        const res = await axios.get(`https://rickandmortyapi.com/api/location/3`);
         setData(res.data);
         setCharacters(res.data);
       } catch (error) {
@@ -31,7 +31,7 @@ export default function All() {
     };
 
     getCharacters();
-  }, [id]);
+  }, []);
 
   //   const deleteCharacter = (id) => {
   //   const filteredCharacters = characters.filter((character) => character.id !== id);
@@ -46,28 +46,7 @@ export default function All() {
   return(
     <>
     
-      <CardDeck>
-        <Card key={data.id}>
-          <Card.Img variant="top" src={image} />
-          <Card.Body>
-            <Card.Title>{name}</Card.Title>
-          </Card.Body> 
-        </Card>  
-    </CardDeck>
-
-          {/* {characters
-            .map((character) => (
-              <Character {...character} key={character.id}/>
-          ))} */}
-   
-  
-      {/* {
-        characters
-          .filter((character) => (filter ? character.died >= 30 : true))
-          .map((character) => (
-            <Character {...character} key={character.id} handleClick={() => deleteCharacter(character.id)} />
-        ))
-      } */}
+         
     </>
   )
 }
