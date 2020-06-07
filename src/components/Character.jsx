@@ -4,18 +4,17 @@ import { Col, Card, Button } from 'react-bootstrap';
 
 import styles from './Character.css';
 
-function Character({ id,characters, name, image, origin, species, handleClick }) {
+function Character({ id,dimension, name, residents, type, handleClick }) {
   return (
     <Card style={{ width: '23rem' }}>
-        <Card.Img variant="top" src={image} alt={name} />
         <Card.Body>
           <Card.Title><h2>{name}</h2></Card.Title>
-          <Card.Text><h3>homeworld: {species}</h3></Card.Text>
+          <Card.Text><h3>Type: {type}</h3></Card.Text>
           <Card.Text>
-            {species}
+            {dimension}
           </Card.Text> 
           <Card.Text>
-            {origin}
+            {residents}
           </Card.Text>
           <Card.Link>
             {/* <Button 

@@ -4,10 +4,12 @@ import { BrowserRouter as Router, Switch, Route, useParams } from 'react-router-
 // import loader from './layout/body';
 import NavBar from './layout/Nav';
 import CharacterList from './components/RickMorty';
+import Resultats from './components/results';
+import location from './components/location';
 
 import './App.css';
 
-const Api = () => <h1>Choose a character from Star Wars</h1>
+const Api = () => <h1>Welcome to Rick & Morty Api</h1>
      
 export default function Routter() {
   return (
@@ -16,7 +18,10 @@ export default function Routter() {
       <NavBar />
       <Switch>
         <Route exact path="/" component={Api} />
-        <Route path="/character/results/:id" component={CharacterList} />
+        <Route path="/character/:id" component={CharacterList} />
+        <Route path="/character/results/:id" component={Resultats} />
+        <Route path="/character/location/:id" component={Location} />
+          {/* <Resultats /> */}
       </Switch>
     </Router>
     </>

@@ -56,7 +56,7 @@
 .loader {
   width: 150px;
   height: 150px;
-  border: 10px solid gold;
+  border: 10px solid #28a745;
   border-top: 10px solid #e5e5e5;
   border-radius: 50%;
   position: absolute;
@@ -74,7 +74,7 @@
 }
 
 .nav {
-  box-shadow: 0px 1px 1020px 1px rgb(255,215,0);
+  /* box-shadow: 0px 1px 1020px 1px rgb(255,215,0); */
   /* border-bottom:1px solid goldenrod; */
   margin-bottom: 2rem;
 } 
