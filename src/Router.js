@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, useParams } from 'react-router-
 
 // import loader from './layout/body';
 import NavBar from './layout/Nav';
+import Footer from './layout/footer';
 import All from './components/AllCharacters';
 import Good from './components/Good';
 import Bad from './components/Bad';
@@ -48,6 +49,7 @@ export default function Routter() {
         <Route path="/theDarkSide/:id" component={Bad} />
         <Route path="/:year/:month/:day" component={ShowDate} />
       </Switch>
+      <Footer />
     </Router>
     </>
   );
