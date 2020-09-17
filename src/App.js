@@ -1,5 +1,7 @@
 import React from 'react';
+
 import Routter from './Router';
+// import "./node_modules/bootstrap/dist/css/bootstrap.css";
 import styles from './App.css';
 
 function loader(){

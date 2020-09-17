@@ -3,13 +3,18 @@ import { BrowserRouter as Router, Switch, Route, useParams } from 'react-router-
 
 // import loader from './layout/body';
 import NavBar from './layout/Nav';
+import HomePage from './layout/home';
 import Footer from './layout/footer';
 import All from './components/AllCharacters';
+import Movies from './components/Movies';
 import Good from './components/Good';
 import Bad from './components/Bad';
 import './App.css';
+//import "./node_modules/bootstrap/dist/css/bootstrap.css";
 
-const Api = () => <h1>Choose a character from Star Wars</h1>
+// const Api = () => <h1>Choose a character from Star Wars</h1>
+const Api = () => <h1>Welcome Jedi</h1>
+  
 const ShowDate = (props) => {
   // const { year, month, day } = props.match.params;
   // la même const mais en hooks 
@@ -43,12 +48,15 @@ export default function Routter() {
     <Router>
       <NavBar />
       <Switch>
-        <Route exact path="/" component={Api} />
+        {/* <Route exact path="/" component={Api} /> */}
+        <Route exact path="/" component={HomePage} />
         <Route path="/character/:id" component={All} />
         <Route path="/alliance/:id" component={Good} />
         <Route path="/theDarkSide/:id" component={Bad} />
+        <Route path="/movies/:id" component={Movies} />
         <Route path="/:year/:month/:day" component={ShowDate} />
       </Switch>
+      {/*<HomePage />*/}
       <Footer />
     </Router>
     </>

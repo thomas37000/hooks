@@ -74,7 +74,7 @@
 }
 
 .nav {
-  box-shadow: 0px 1px 1020px 1px rgb(255,215,0);
+  box-shadow: 0px 1px 10px 1px rgb(255,215,0);
   /* border-bottom:1px solid goldenrod; */
   margin-bottom: 2rem;
 } 
@@ -87,8 +87,9 @@
   color: goldenrod;
 }
 
-h1 {
+h1, h2, h3 {
   color: #fff;
+  text-align: center;
 }
 
 /* img {
