@@ -10,6 +10,8 @@ export default function Footer() {
   <>
     <Nav className={footer.footerStyle} defaultActiveKey="/home">
       <a href="https://github.com/akabab/starwars-api" target="_blank">Api Star Wars !</a>
+      <a>Made by Thomas Chalanson</a>
+      <a href="https://www.linkedin.com/in/thomas-chalanson/?originalSubdomain=fr">linkedin</a>
     </Nav>
   </>
   );

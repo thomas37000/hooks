@@ -47,6 +47,7 @@ export default function HomePage() {
     />
 
     <Carousel.Caption>
+    <Link to="/movies/:id">All the Movies from the saga Star wars</Link>
       <h3>All the Movies from the saga Star wars</h3>
       <p>Discover all the saga from the beginnig to the end.</p>
     </Carousel.Caption>
@@ -59,6 +60,7 @@ export default function HomePage() {
     />
 
     <Carousel.Caption>
+    <Link to="/video-games/:id">All the Video Games from the saga Star wars</Link>
       <h3>All the Video Games from the saga Star wars</h3>
       <p>Discover all the video games about Star Wars.</p>
     </Carousel.Caption>
