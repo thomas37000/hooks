@@ -19,6 +19,9 @@ export default function NavBar() {
       <Nav.Item>
         <Nav.Link href="/">Home</Nav.Link>
       </Nav.Item>
+      <Nav.Item>
+        <Nav.Link href="/allCharacters">All Characters</Nav.Link>
+      </Nav.Item>
       {/* <Nav.Item>
         <Nav.Link eventKey="link-1"><Link to="/character/1">Luke Skywalker</Link></Nav.Link>
       </Nav.Item>

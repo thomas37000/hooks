@@ -7,10 +7,12 @@ import NavBar from './layout/Nav';
 import HomePage from './layout/home';
 import Footer from './layout/footer';
 import All from './components/AllCharacters';
+import StarWars from './components/StarWars';
 import Movies from './components/Movies';
 import Good from './components/Good';
 import Bad from './components/Bad';
 import './App.css';
+
 //import "./node_modules/bootstrap/dist/css/bootstrap.css";
 
 // const Api = () => <h1>Choose a character from Star Wars</h1>
@@ -51,6 +53,7 @@ export default function Routter() {
       <Switch>
         {/* <Route exact path="/" component={Api} /> */}
         <Route exact path="/" component={HomePage} />
+        <Route path="/allCharacters/" component={StarWars} />
         <Route path="/character/:id" component={All} />
         <Route path="/alliance/:id" component={Good} />
         <Route path="/theDarkSide/:id" component={Bad} />
