@@ -1,5 +1,5 @@
-import React, {useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React, {useState, useEffect, useParams } from 'react';
+  
 import { Button, Card, CardDeck} from  'react-bootstrap';
 import axios from 'axios';
 
@@ -59,7 +59,7 @@ export default function All() {
             .map((character) => (
               <Character {...character} key={character.id}/>
           ))} */}
-   
+  
   
       {/* {
         characters

@@ -108,7 +108,7 @@ if (error) return <div>Error...</div>;
             {affiliations}
           </Card.Text>
           <Card.Link>
-             <Button 
+            <Button 
               variant="primary"
               type="button" 
               onClick={

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, useParams } from 'react-router-dom';
+import styles from './App.css';
 
 // import loader from './layout/body';
 import NavBar from './layout/Nav';

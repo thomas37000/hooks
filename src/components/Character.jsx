@@ -76,7 +76,7 @@ export default function Character() {
 {/* {characters
         .filter((characters) => (filter ? characters.affiliations.includes("Jedi") : true))} */}
 
-         <Card style={{ width: '23rem' }}>
+        <Card style={{ width: '23rem' }}>
         <Card.Img variant="top" src={image} alt={name} />
         <Card.Body>
           <Card.Title><h2>{name}</h2></Card.Title>
