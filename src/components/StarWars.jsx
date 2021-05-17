@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Card from './Card';
+import Card from './Characters/Card';
 
 const StarWars = () => {
   const [datas, setDatas] = useState([]);
@@ -13,7 +13,7 @@ const StarWars = () => {
       .then((res) => res.data)
       .then((data) => {
         setDatas(data);
-        console.log('twitter datas', data);
+        console.log('star wars characters', data);
       })
       .catch((error) => {
         let message;
@@ -29,9 +29,13 @@ const StarWars = () => {
 
   return (
     <div className='galerie'>
-      {datas.map((data) => (
-        <Card key={data.id} data={data} />
-      ))}
+      {datas
+        // .filter((data) =>  data.species.includes('human'))
+        // .filter((data) =>  data.species === 'droid')
+        // .filter((data) => data.affiliations[0].includes('Alliance'))
+        .map((data) => (
+          <Card key={data.id} data={data} />
+        ))}
     </div>
   );
 };

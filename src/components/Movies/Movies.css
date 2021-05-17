@@ -1,0 +1,15 @@
+.filmographie {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.MovieCard {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  background-image: linear-gradient(to right top, #004d7a, #008793);
+}
+
+.movieCardImg {
+  height: 400px;
+}

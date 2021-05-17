@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Button, Card} from  'react-bootstrap';
 import axios from 'axios';
 
-import styles from './Character.css';
+import styles from './Characters/Character.css';
 
 export default function Bad() {
   const { id } = useParams();

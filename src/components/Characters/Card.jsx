@@ -2,17 +2,27 @@
 /* eslint-disable react/jsx-curly-brace-presence */
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './Card.css';
 
 export default function Card({ data }) {
   const [isImg, setIsImg] = useState(true);
-  const { affiliations, homeworld, image, masters, name } = data;
+  const { cardById, id } = data;
 
   return (
     <div className='card'>
-      <img className='cardImg' src={data.image} alt={data.name} />
-      <h2 className='cardName'>{data.name}</h2>
+      <Link to={`/character/${id}`}>
+        <img
+          className='cardImg'
+          src={data.image}
+          alt={data.name}
+          onClick={cardById}
+        />
+        <h2 className='cardName' onClick={cardById}>
+          {data.name}
+        </h2>
+      </Link>
     </div>
   );
 }

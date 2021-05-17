@@ -1,0 +1,54 @@
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav a {
+  display: flex;
+}
+
+nav {
+  background: #333;
+  color: #fff;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  overflow-x: hidden;
+  /* transition: 0.7s all ease-in-out; */
+}
+
+.opneSidebar {
+  transition: 0.7s;
+  width: 200px;
+}
+
+#close {
+  font-size: 4.3rem;
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+}
+
+.navlist {
+  padding: 1rem 3rem;
+}
+.navlist li {
+  margin: 1rem 0;
+  transition: all 300ms ease-in-out;
+}
+.navlist li a {
+  color: #fff;
+  font-size: 2rem;
+  transition: all 300ms ease-in-out;
+}
+
+.fa {
+  color: gold;
+}

@@ -1,11 +1,17 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { Button, Nav } from 'react-bootstrap';
+import { NavItem } from 'react-bootstrap';
+
+import SideBar from './Sidebar';
+import './Sidebar.css';
 
 export default function NavBar() {
-  
-  // const location = useLocation();
+  const [on, setOn] = React.useState(false);
+
+  const handleOn = () => {
+    setOn(!on);
+  };
   const history = useHistory();
 
   const randomNumber = () => {
@@ -14,42 +20,49 @@ export default function NavBar() {
   };
 
   return (
-  <>
-    <Nav defaultActiveKey="/home">
-      <Nav.Item>
-        <Nav.Link href="/">Home</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link href="/allCharacters">All Characters</Nav.Link>
-      </Nav.Item>
-      {/* <Nav.Item>
-        <Nav.Link eventKey="link-1"><Link to="/character/1">Luke Skywalker</Link></Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-2"><Link to="/character/5">Leia Organa</Link></Nav.Link>
-      </Nav.Item> */}
-      {/* <Nav.Item>
-        <Button variant="light" onClick={() => history.push(`/character/${randomNumber()}`)}>Random</Button>
-      </Nav.Item> */}
-      <Nav.Item>
+    <>
+      <Nav defaultActiveKey='/home'>
+        <Nav.Item>
+          <Nav.Link href='/'>Home</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link href='/allCharacters'>All Characters</Nav.Link>
+        </Nav.Item>
+
+        <aside className={on ? 'to-right' : ''}>
+          <div onClick={handleOn}>
+            <i className='fa fa-cog fa-2x' />
+          </div>
+        </aside>
+        {on && <SideBar openClass='open' />}
+
+        {/* <Nav.Item>
         <Button variant="success" onClick={() => history.push(`/alliance/${randomNumber()}`)}>The Alliance</Button>
       </Nav.Item>
       <Nav.Item>
         <Button variant="dark" onClick={() => history.push(`/theDarkSide/${randomNumber()}`)}>The DarkSide</Button>
-      </Nav.Item>
-      {/* <Nav.Item>
-        <Nav.Link eventKey="link-3"><Link to="/alliance/">The Alliance</Link></Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-4"><Link to="/theDarkSide/">The Dark Side</Link></Nav.Link>
       </Nav.Item> */}
-      <Nav.Item>
-        <Nav.Link eventKey="link-3"><Link to="/movies/:id">Star Wars Movies</Link></Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-4"><Link to="/video-games/:id">Star Wars Video Games</Link></Nav.Link>
-      </Nav.Item>
-    </Nav>
-  </>
+        <Nav.Item>
+          <Nav.Link eventKey='link-3'>
+            <Link to='/alliance/'>The Alliance</Link>
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey='link-4'>
+            <Link to='/theDarkSide/'>The Dark Side</Link>
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey='link-3'>
+            <Link to='/movies/'>Star Wars Movies</Link>
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey='link-4'>
+            <Link to='/video-games/:id'>Star Wars Video Games</Link>
+          </Nav.Link>
+        </Nav.Item>
+      </Nav>
+    </>
   );
 }
