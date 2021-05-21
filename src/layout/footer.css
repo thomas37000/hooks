@@ -1,5 +1,4 @@
 .footerStyle {
-  position: absolute;
-  bottom: 0;
-  background-color: red;
+  display: flex;
+  justify-content: space-around;
 }

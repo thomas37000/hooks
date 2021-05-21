@@ -11,18 +11,20 @@ export default function Card({ data }) {
   const { cardById, id } = data;
 
   return (
-    <div className='card'>
-      <Link to={`/character/${id}`}>
-        <img
-          className='cardImg'
-          src={data.image}
-          alt={data.name}
-          onClick={cardById}
-        />
-        <h2 className='cardName' onClick={cardById}>
-          {data.name}
-        </h2>
-      </Link>
+    <div className="card-container">
+      <div className='card'>
+        <Link to={`/character/${id}`}>
+          <img
+            className='cardImg'
+            src={data.image}
+            alt={data.name}
+            onClick={cardById}
+          />
+          <h2 className='cardName' onClick={cardById}>
+            {data.name}
+          </h2>
+        </Link>
+      </div>
     </div>
   );
 }

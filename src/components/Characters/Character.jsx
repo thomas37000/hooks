@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Button, Card } from 'react-bootstrap';
 import axios from 'axios';
-import styles from './Character.css';
+import './Character.css';
 
 export default function Character() {
   const { id } = useParams();
@@ -73,59 +73,57 @@ export default function Character() {
 
       {/* {characters
         .filter((characters) => (filter ? characters.affiliations.includes("Jedi") : true))} */}
-
-      <Card
-        style={{ width: '23rem' }}
-        className={styles.detail}
-      >
-        <Card.Img variant='top' src={image} alt={name} />
-        <Card.Body>
-          <Card.Title>
-            <h2>{name}</h2>
-          </Card.Title>
-          <Card.Text>
-            <h3>homeworld: {homeworld}</h3>
-          </Card.Text>
-          <Card.Text>
-            {filter ? characters.affiliations.includes('jedi') : true}
-            {affiliations}
-          </Card.Text>
-          <Card.Text>{masters}</Card.Text>
-          <Card.Link>
-            <Button
-              variant='primary'
-              type='button'
-              onClick={() => setLikes(likes + 1)}
-            >
-              Like ({likes})
-            </Button>
-            <Button
-              variant='danger'
-              type='button'
-              onClick={() => setDisLikes(dislikes - 1)}
-            >
-              Dislike ({dislikes})
-            </Button>
-          </Card.Link>
-          <Card.Text>
-            <a href='/some/valid/uri' class='fa fa-facebook'>
-              {' '}
-            </a>
-            <a href='/some/valid/uri' class='fa fa-twitter'>
-              {' '}
-            </a>
-            <a href='/some/valid/uri' class='fa fa-instagram'>
-              {' '}
-            </a>
-            <a href='/some/valid/uri' class='fa fa-pinterest'>
-              {' '}
-            </a>
-            <a href='/some/valid/uri' class='fa fa-snapchat-ghost'>
-              {' '}
-            </a>
-          </Card.Text>
-        </Card.Body>
-      </Card>
+      <div className='card-deck-container'>
+        <Card style={{ width: '23rem' }}>
+          <Card.Img variant='top' src={image} alt={name} />
+          <Card.Body>
+            <Card.Title>
+              <h2>{name}</h2>
+            </Card.Title>
+            <Card.Text>
+              <h3>homeworld: {homeworld}</h3>
+            </Card.Text>
+            <Card.Text>
+              {filter ? characters.affiliations.includes('jedi') : true}
+              {affiliations}
+            </Card.Text>
+            <Card.Text>{masters}</Card.Text>
+            <Card.Link className='like'>
+              <Button
+                variant='primary'
+                type='button'
+                onClick={() => setLikes(likes + 1)}
+              >
+                Like ({likes})
+              </Button>
+              <Button
+                variant='danger'
+                type='button'
+                onClick={() => setDisLikes(dislikes - 1)}
+              >
+                Dislike ({dislikes})
+              </Button>
+            </Card.Link>
+            <Card.Text className='networks'>
+              <a href='/some/valid/uri' class='fa fa-facebook'>
+                {' '}
+              </a>
+              <a href='/some/valid/uri' class='fa fa-twitter'>
+                {' '}
+              </a>
+              <a href='/some/valid/uri' class='fa fa-instagram'>
+                {' '}
+              </a>
+              <a href='/some/valid/uri' class='fa fa-pinterest'>
+                {' '}
+              </a>
+              <a href='/some/valid/uri' class='fa fa-snapchat-ghost'>
+                {' '}
+              </a>
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
     </>
   );
 }

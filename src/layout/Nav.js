@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { Button, Nav } from 'react-bootstrap';
-import { NavItem } from 'react-bootstrap';
 
 import SideBar from './Sidebar';
 import './Sidebar.css';
 
 export default function NavBar() {
-  const [on, setOn] = React.useState(false);
+  const [on, setOn] = useState(false);
 
   const handleOn = () => {
     setOn(!on);

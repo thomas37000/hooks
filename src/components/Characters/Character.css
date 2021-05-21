@@ -1,3 +1,8 @@
+.card-deck-container {
+  display: flex;
+  justify-content: center;
+}
+
 .card-deck {
   display: inline-grid;
   width: 10rem;
@@ -8,11 +13,22 @@
 }
 
 .card h2 {
-  color:red;
+  color:#000;
+}
+
+.like {
+  display: flex;
+  justify-content: center;
+  align-items: end;
 }
 
 .btn-primary {
   margin: 1rem;
+}
+
+.networks {
+  display: flex;
+  justify-content: space-between;
 }
 
 .fa {
