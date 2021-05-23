@@ -29,13 +29,13 @@ export default function CardGames({ data }) {
 
   if (loading) return <div>Loading...</div>;
 
-  const { console, genre, title, year } = data;
+  const { console, img, genre, title, year } = data;
 
   return (
     <>
       <div className='card-deck-container'>
         <Card style={{ width: '23rem' }}>
-          {/* <Card.Img variant='top' src={image} alt={name} /> */}
+          <Card.Img variant='top' src={data.img} alt={data.title} />
           <Card.Body>
             <Card.Title>
               <h2>{data.title}</h2>
