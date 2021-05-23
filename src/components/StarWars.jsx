@@ -30,7 +30,7 @@ const StarWars = () => {
   return (
     <div className='galerie'>
       {datas
-        // .filter((data) =>  data.species.includes('human'))
+        // .filter((data) => data.species.includes('human'))
         // .filter((data) =>  data.species === 'droid')
         // .filter((data) => data.affiliations[0].includes('Alliance'))
         .map((data) => (

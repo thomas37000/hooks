@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { Button, Nav } from 'react-bootstrap';
+import './nav.css';
 
-import SideBar from './Sidebar';
-import './Sidebar.css';
-
-export default function NavBar() {
+export default function NavbarContainer({ toggleMenu }) {
   const [on, setOn] = useState(false);
 
   const handleOn = () => {
@@ -28,12 +26,13 @@ export default function NavBar() {
           <Nav.Link href='/allCharacters'>All Characters</Nav.Link>
         </Nav.Item>
 
-        <aside className={on ? 'to-right' : ''}>
-          <div onClick={handleOn}>
-            <i className='fa fa-cog fa-2x' />
-          </div>
-        </aside>
-        {on && <SideBar openClass='open' />}
+        <button
+          className='btn-sidebar btn btn-default'
+          type='button'
+          onClick={() => toggleMenu(true)}
+        >
+          <i className='fa fa-cog fa-2x' />
+        </button>
 
         {/* <Nav.Item>
         <Button variant="success" onClick={() => history.push(`/alliance/${randomNumber()}`)}>The Alliance</Button>

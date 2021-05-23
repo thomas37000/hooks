@@ -24,6 +24,7 @@
 
 .btn-primary {
   margin: 1rem;
+  color: #fff!important;
 }
 
 .networks {
@@ -41,7 +42,7 @@
   border-radius: 50px;
 }
 
-.fa:hover {
+.faNetworks:hover {
     opacity: 0.7;
     color: #fff;
     text-decoration: none;

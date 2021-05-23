@@ -49,6 +49,26 @@ nav {
   transition: all 300ms ease-in-out;
 }
 
-.fa {
-  color: gold;
+.filter-by {
+  margin: 2rem 0 1rem 0;
+}
+
+.sidebar-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter-category {
+  margin-bottom: 1.5rem;
+}
+
+.input-group-text {
+  background-color: transparent;
+  border: transparent;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }

@@ -7,16 +7,18 @@ import {
 } from 'react-router-dom';
 
 // import loader from './layout/body';
-import NavBar from './layout/Nav';
-import HomePage from './layout/home';
-import Footer from './layout/footer';
-import StarWars from './components/StarWars';
-import Good from './components/Good';
-import Bad from './components/Bad';
+import FilterContextProvider from './components/Context/filterContext';
 import Character from './components/Characters/Character';
 import MovieDetail from './components/Movies/MovieDetail';
 import Movies from './components/Movies/Movies';
+import StarWars from './components/StarWars';
+import HomePage from './layout/home';
+import Footer from './layout/footer';
+import Good from './components/Good';
+import NavBar from './layout/NavBar';
+import Bad from './components/Bad';
 import './App.css';
+
 
 //import "./node_modules/bootstrap/dist/css/bootstrap.css";
 
@@ -60,20 +62,22 @@ export default function Routter() {
   return (
     <>
       <Router>
-        <NavBar />
-        <Switch>
-          {/* <Route exact path="/" component={Api} /> */}
-          <Route exact path='/' component={HomePage} />
-          <Route path='/allCharacters/' component={StarWars} />
-          <Route path='/character/:id' component={Character} />
-          <Route path='/alliance/:id' component={Good} />
-          <Route path='/theDarkSide/:id' component={Bad} />
-          <Route path='/movies/' component={Movies} />
-          <Route path='/movie/:id' component={MovieDetail} />
-          <Route path='/:year/:month/:day' component={ShowDate} />
-        </Switch>
-        {/*<HomePage />*/}
-        <Footer />
+        <FilterContextProvider>
+          <NavBar />
+          <Switch>
+            {/* <Route exact path="/" component={Api} /> */}
+            <Route exact path='/' component={HomePage} />
+            <Route path='/allCharacters/' component={StarWars} />
+            <Route path='/character/:id' component={Character} />
+            <Route path='/alliance/:id' component={Good} />
+            <Route path='/theDarkSide/:id' component={Bad} />
+            <Route path='/movies/' component={Movies} />
+            <Route path='/movie/:id' component={MovieDetail} />
+            <Route path='/:year/:month/:day' component={ShowDate} />
+          </Switch>
+          {/*<HomePage />*/}
+          <Footer />
+        </FilterContextProvider>
       </Router>
     </>
   );
