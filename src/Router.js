@@ -10,6 +10,7 @@ import {
 import FilterContextProvider from './components/Context/filterContext';
 import Character from './components/Characters/Character';
 import MovieDetail from './components/Movies/MovieDetail';
+import GameDetail from './components/GameDetail';
 import VideoGames from './components/VideoGames';
 import Movies from './components/Movies/Movies';
 import StarWars from './components/StarWars';
@@ -74,6 +75,7 @@ export default function Routter() {
             <Route path='/movies/' component={Movies} />
             <Route path='/movie/:id' component={MovieDetail} />
             <Route path='/video-games/' component={VideoGames} />
+            <Route path='/video-game/:id' component={GameDetail} />
             <Route path='/:year/:month/:day' component={ShowDate} />
           </Switch>
           {/*<HomePage />*/}
