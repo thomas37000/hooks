@@ -33,7 +33,8 @@
         "rôle": false
       }
     ],
-    "year": 2021
+    "year": 2021,
+    "img": "https://image.jeuxvideo.com/medias/159862/1598619026-6652-jaquette-avant.jpg"
   },
   {
     "id": 1,
@@ -70,7 +71,8 @@
         "shooter": true
       }
     ],
-    "year": 2020
+    "year": 2020,
+    "img": "https://s2.gaming-cdn.com/images/products/6610/271x377/star-wars-squadrons-cover.jpg"
   },
   {
     "id": 2,
@@ -107,7 +109,8 @@
         "shooter": false
       }
     ],
-    "year": 2019
+    "year": 2019,
+    "img": "https://images-na.ssl-images-amazon.com/images/I/71Xz9rNV5HL._AC_SX569_.jpg"
   },
   {
     "id": 3,
@@ -144,7 +147,8 @@
         "shooter": true
       }
     ],
-    "year": 2017
+    "year": 2017,
+    "img": "https://image.api.playstation.com/cdn/EP0006/CUSA05749_00/lOh528s3J3zcjOn8x8tn0iQyPlkIIfP7.png"
   },
   {
     "id": 4,
@@ -181,7 +185,8 @@
         "shooter": true
       }
     ],
-    "year": 2015
+    "year": 2015,
+    "img": "https://images-na.ssl-images-amazon.com/images/I/81YUQAv7QZL._AC_SL1500_.jpg"
   }
 ]
 

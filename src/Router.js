@@ -10,6 +10,7 @@ import {
 import FilterContextProvider from './components/Context/filterContext';
 import Character from './components/Characters/Character';
 import MovieDetail from './components/Movies/MovieDetail';
+import VideoGames from './components/VideoGames';
 import Movies from './components/Movies/Movies';
 import StarWars from './components/StarWars';
 import HomePage from './layout/home';
@@ -18,7 +19,6 @@ import Good from './components/Good';
 import NavBar from './layout/NavBar';
 import Bad from './components/Bad';
 import './App.css';
-
 
 //import "./node_modules/bootstrap/dist/css/bootstrap.css";
 
@@ -73,6 +73,7 @@ export default function Routter() {
             <Route path='/theDarkSide/:id' component={Bad} />
             <Route path='/movies/' component={Movies} />
             <Route path='/movie/:id' component={MovieDetail} />
+            <Route path='/video-games/' component={VideoGames} />
             <Route path='/:year/:month/:day' component={ShowDate} />
           </Switch>
           {/*<HomePage />*/}

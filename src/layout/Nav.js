@@ -57,7 +57,7 @@ export default function NavbarContainer({ toggleMenu }) {
         </Nav.Item>
         <Nav.Item>
           <Nav.Link eventKey='link-4'>
-            <Link to='/video-games/:id'>Star Wars Video Games</Link>
+            <Link to='/video-games'>Star Wars Video Games</Link>
           </Nav.Link>
         </Nav.Item>
       </Nav>
