@@ -53,19 +53,19 @@ export default function MovieDetail() {
             </Card.Link>
 
             <Card.Text className='networks'>
-              <a href='/some/valid/uri' class='fa fa-facebook'>
+              <a href='/some/valid/uri' className='fa fa-facebook faNetworks'>
                 {' '}
               </a>
-              <a href='/some/valid/uri' class='fa fa-twitter'>
+              <a href='/some/valid/uri' className='fa fa-twitter faNetworks'>
                 {' '}
               </a>
-              <a href='/some/valid/uri' class='fa fa-instagram'>
+              <a href='/some/valid/uri' className='fa fa-instagram faNetworks'>
                 {' '}
               </a>
-              <a href='/some/valid/uri' class='fa fa-pinterest'>
+              <a href='/some/valid/uri' className='fa fa-pinterest faNetworks'>
                 {' '}
               </a>
-              <a href='/some/valid/uri' class='fa fa-snapchat-ghost'>
+              <a href='/some/valid/uri' className='fa fa-snapchat-ghost faNetworks'>
                 {' '}
               </a>
             </Card.Text>

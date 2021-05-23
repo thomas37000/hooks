@@ -1,0 +1,187 @@
+[
+  {
+    "id": 0,
+    "title": "Lego Star Wars : La Saga Skywalker",
+    "console": [
+      {
+        "3do": false,
+        "gameboy-advance": false,
+        "megadrive-mega-cd":false,
+        "nintendo-gamegube":false,
+        "n64": false,
+        "nintendo-switch": true,
+        "pc":true,
+        "ps": false,
+        "ps2": false,
+        "ps3": false,
+        "ps4": true,
+        "ps5": true,
+        "super-nintendo":false,
+        "x-box": false,
+        "xbox-one":true,
+        "xbox-series": true
+      }
+    ],
+    "genre": [
+      {
+        "action": true,
+        "aventure": true,
+        "combat": false,
+        "fps": false,
+        "plates-formes": false,
+        "réflexion": false, 
+        "rôle": false
+      }
+    ],
+    "year": 2021
+  },
+  {
+    "id": 1,
+    "title": "Star Wars: Squadrons",
+    "console": [
+      {
+        "3do": false,
+        "gameboy-advance": false,
+        "megadrive-mega-cd":false,
+        "nintendo-gamegube":false,
+        "n64": false,
+        "nintendo-switch": false,
+        "pc":true,
+        "ps": false,
+        "ps2": false,
+        "ps3": false,
+        "ps4": true,
+        "ps5": false,
+        "super-nintendo":false,
+        "x-box": false,
+        "xbox-one":true,
+        "xbox-series": false
+      }
+    ],
+    "genre": [
+      {
+        "action": true,
+        "aventure": true,
+        "combat": true,
+        "fps": false,
+        "plates-formes": false,
+        "réflexion": false, 
+        "rôle": false,
+        "shooter": true
+      }
+    ],
+    "year": 2020
+  },
+  {
+    "id": 2,
+    "title": "Star Wars Jedi: Fallen Order",
+    "console": [
+      {
+        "3do": false,
+        "gameboy-advance": false,
+        "megadrive-mega-cd":false,
+        "nintendo-gamegube":false,
+        "n64": false,
+        "nintendo-switch": false,
+        "pc":true,
+        "ps": false,
+        "ps2": false,
+        "ps3": false,
+        "ps4": true,
+        "ps5": true,
+        "super-nintendo":false,
+        "x-box": false,
+        "xbox-one":true,
+        "xbox-series": false
+      }
+    ],
+    "genre": [
+      {
+        "action": true,
+        "aventure": true,
+        "combat": true,
+        "fps": false,
+        "plates-formes": true,
+        "réflexion": true, 
+        "rôle": true,
+        "shooter": false
+      }
+    ],
+    "year": 2019
+  },
+  {
+    "id": 3,
+    "title": "Star Wars Battlefront II",
+    "console": [
+      {
+        "3do": false,
+        "gameboy-advance": false,
+        "megadrive-mega-cd":false,
+        "nintendo-gamegube":false,
+        "n64": false,
+        "nintendo-switch": true,
+        "pc":true,
+        "ps": false,
+        "ps2": false,
+        "ps3": false,
+        "ps4": true,
+        "ps5": false,
+        "super-nintendo":false,
+        "x-box": false,
+        "xbox-one":true,
+        "xbox-series": true
+      }
+    ],
+    "genre": [
+      {
+        "action": true,
+        "aventure": false,
+        "combat": true,
+        "fps": true,
+        "plates-formes": true,
+        "réflexion": true, 
+        "rôle": true,
+        "shooter": true
+      }
+    ],
+    "year": 2017
+  },
+  {
+    "id": 4,
+    "title": "Star Wars Battlefront",
+    "console": [
+      {
+        "3do": false,
+        "gameboy-advance": false,
+        "megadrive-mega-cd":false,
+        "nintendo-gamegube":false,
+        "n64": false,
+        "nintendo-switch": false,
+        "pc":true,
+        "ps": false,
+        "ps2": false,
+        "ps3": false,
+        "ps4": true,
+        "ps5": false,
+        "super-nintendo":false,
+        "x-box": false,
+        "xbox-one":true,
+        "xbox-series": false
+      }
+    ],
+    "genre": [
+      {
+        "action": true,
+        "aventure": false,
+        "combat": true,
+        "fps": true,
+        "plates-formes": true,
+        "réflexion": true, 
+        "rôle": true,
+        "shooter": true
+      }
+    ],
+    "year": 2015
+  }
+]
+
