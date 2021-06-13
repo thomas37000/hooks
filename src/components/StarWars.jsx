@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from './Characters/Card';
+import Api from '../api/api';
 
 const StarWars = () => {
   const [datas, setDatas] = useState([]);
@@ -9,7 +10,7 @@ const StarWars = () => {
 
   useEffect(() => {
     axios
-      .get(`${API_URL}`)
+      .get(Api)
       .then((res) => res.data)
       .then((data) => {
         setDatas(data);

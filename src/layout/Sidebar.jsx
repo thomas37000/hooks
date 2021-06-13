@@ -14,7 +14,8 @@ import './Sidebar.css';
 const Sidebar = ({ show, setIsOpened }) => {
   const { states } = useContext(FilterContext);
 
-  const [humans, setHumans] = useState(states.false);
+  const [humans, setHumans] = useState();
+  console.log('humans', humans);
   const [rebels, setRebels] = useState(states.false);
   const [republic, setRepublic] = useState(states.false);
   const [robots, setRobots] = useState(states.false);
@@ -22,8 +23,7 @@ const Sidebar = ({ show, setIsOpened }) => {
 
   const handleChangeHumans = (e) => {
     setHumans(e.target.value);
-    states.function.setHumans(e.target.value);
-    
+    console.log('humans onClick', humans);
   };
 
   return (

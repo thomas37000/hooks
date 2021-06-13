@@ -12,6 +12,12 @@
   color: goldenrod;
 }
 
+.btn-sidebar {
+  padding: 0;
+  margin-bottom: 0;
+}
+
 .btn-sidebar:hover {
   color: gold;
 }
+

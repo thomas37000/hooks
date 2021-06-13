@@ -13,29 +13,37 @@ export default function GameDetail() {
   const [likes, setLikes] = useState(0);
   const [dislikes, setDisLikes] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [gameDetail, setGameDetail] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios
-      //.get(`https://cdn.rawgit.com/akabab/starwars-api/0.2.1/api/id/${id}.json`)
-      .get(
-        `https://raw.githubusercontent.com/thomas37000/hooks/alliance/src/videoGames${id}.json`
-      )
-      .then((res) => {
-        setDatas({
-          allData: res.data,
-          console: res.data.console,
-          genre: res.data.genre,
-        });
+    const getGameDetail = async () => {
+      try {
+        const res = await axios.get(
+          `https://raw.githubusercontent.com/thomas37000/hooks/alliance/src/videoGames.json`
+        );
+        // setDatas({
+        //   allData: res.data,
+        //   console: res.data.console,
+        //   genre: res.data.genre,
+        // });
+        setGameDetail(
+          res.data.filter((game) => {
+            return game.id === parseInt(id);
+          })[0]
+        );
+      } catch (error) {
+        setError(error);
+      } finally {
         setLoading(false);
-      });
-    {
-      (error) => {
-        console.error(error);
-      };
-    }
+      }
+    };
+    getGameDetail();
   }, [id]);
 
+  if (!gameDetail) return <div>err...</div>;
   if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error...</div>;
 
   const { console, genre, img, title, year } = datas;
 
@@ -43,18 +51,18 @@ export default function GameDetail() {
     <>
       <div className='card-deck-container'>
         <Card style={{ width: '23rem' }}>
-          <Card.Img variant='top' src={img} alt={title} />
+          <Card.Img variant='top' src={gameDetail.img} alt={gameDetail.title} />
           <Card.Body>
             <Card.Title>
-              <h2>{title}</h2>
+              <h2>{gameDetail.title}</h2>
             </Card.Title>
             <Card.Text>
-              <h3>year: {year}</h3>
+              <h3>year: {gameDetail.year}</h3>
             </Card.Text>
-            <Card.Text>
-              <h3>console: {console}</h3>
+            {/* <Card.Text>
+              <h3>console: {gameDetail.console}</h3>
             </Card.Text>
-            <Card.Text>genre: {genre}</Card.Text>
+            <Card.Text>genre: {gameDetail.genre}</Card.Text> */}
             <Card.Link className='like'>
               <Button
                 variant='primary'
